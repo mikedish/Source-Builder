@@ -19,20 +19,8 @@ input.error {border-color: #F00;}
 
 </head>
 <body>
-    <div class="topbar">
-      <div class="fill">
-        <div class="container">
-           <img src="img/trilogy-labs.png" height="40" width="296" />
-          <a class="brand" href="/">Source Code Builder</a>
-          <ul class="nav">
-            <li><a href="/">Home</a></li>
-            <li><a href="/source-list.php">Source Code Log</a></li>
-            <li><a href="/clientlist.html">Client Database</a></li>
-            <li class="active"><a href="/adnetworklist.html">Ad Networks</a></li>
-          </ul>
-
-        </div>
-      </div>
+<body>
+<? include 'navbar.php'; ?>
 
     </div>
     <div class="container main">

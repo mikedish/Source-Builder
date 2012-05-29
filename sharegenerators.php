@@ -9,7 +9,7 @@
 <link rel="stylesheet" href="css/bootstrap.min.css" />
 <link rel="stylesheet" href="css/chosen.css" />
 <style type="text/css">
-.main {margin-top: 60px;}
+.main {margin-top: 90px;}
 .ui-datepicker-today a {border: 1px solid #333 !important;}
 #generated-text {width: 300px;}
 label.error {color: #F00; width: 100%; text-align: left; display: none;}
@@ -19,22 +19,9 @@ input.error {border-color: #F00;}
 
 </head>
 <body>
-    <div class="topbar">
-      <div class="fill">
-        <div class="container">
-           <img src="img/trilogy-labs.png" height="40" width="296" />
-          <a class="brand" href="/">Source Code Builder</a>
-          <ul class="nav">
-            <li><a href="/">Home</a></li>
-            <li><a href="/source-list.php">Source Code Log</a></li>
-            <li><a href="/clientlist.html">Client Database</a></li>
-            <li class="active"><a href="/sharegenerators.php">Share Generators</a></li>
-          </ul>
+<body>
+<?php include 'navbar.php'; ?>
 
-        </div>
-      </div>
-
-    </div>
     <div class="container main">
     <div class="row">
      <div class="span16">
