@@ -7,7 +7,8 @@ $(document).ready(function() {
                 width: document.getElementById('calloutProperties[width]').value,
                 url: document.getElementById('calloutProperties[url]').value,
                 height: document.getElementById('calloutProperties[height]').value,
-                alt: document.getElementById('calloutProperties[alt]').value  
+                alt: document.getElementById('calloutProperties[alt]').value, 
+                link: document.getElementById('calloutProperties[link]').value
             }),
             emailHtml = new EmailText({
                 text: document.getElementById('text').value,

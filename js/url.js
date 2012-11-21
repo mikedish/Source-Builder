@@ -14,10 +14,15 @@ Url.prototype = {
         this.campaign = options.campaign
         this.additional = options.additional
         this.adProperties = options.adProperties
+        this.addthisProperties = options.addthisProperties
+    },
+
+    cleanableText: function(input) {
+        return !input.hasOwnProperty('title') && !input.hasOwnProperty('description') 
     },
 
     cleanText: function(options) {
-        if (typeof(options) == "object") {
+        if ((typeof(options) == "object") && this.cleanableText(options))  {
             for (var i in options) {
                 if (options.hasOwnProperty(i)) {
                     options[i] = this.cleanText(options[i])
@@ -38,15 +43,15 @@ Url.prototype = {
     },
 
     formattedMedium: function(type) {
-      if (type === 'url') {
-        return this.medium + '_' 
-      }else if (type === 'plain') {
-        return this.medium
-      }
+        if (type === 'url') {
+            return this.medium + '_' 
+        } else if (type === 'plain') {
+            return this.medium
+        }
     },
     
     getMedium:function() {
-      return this.medium
+        return this.medium
     },
    
     getClient: function() {
@@ -108,7 +113,6 @@ Url.prototype = {
     },
 
     salsaBlastKey: function() {
-        console.log(this.platform)
         if (this.platform === 'salsa' && this.medium === 'ema') {
             return 'bk[[email_blast_KEY]]' 
         }

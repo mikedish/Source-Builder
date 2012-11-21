@@ -46,11 +46,11 @@ $(document).ready(function() {
         generatedUrl = new Url(inputs)
         
         if ($form.valid()) {
-        // if (true) {
+//        if (true) {
             if (inputs.medium !== 'add') {
                 output(generatedUrl.fullUrl())
             } else if (inputs.medium === 'add') {
-                var generatedAddthisCode = new AddthisCode(generatedUrl, inputs.addthisProperties)
+                var generatedAddthisCode = new AddthisCode(generatedUrl)
                 output(generatedAddthisCode.fullCode())
             }
         }

@@ -37,7 +37,7 @@ Callout.prototype = {
 
     imageTag: function() {
       var textArray = []
-      textArray.push('<imgheight="')
+      textArray.push('<img height="')
       textArray.push(this.heightInPixels())
       textArray.push('" border="0" width="')
       textArray.push(this.widthInPixels())
@@ -56,7 +56,7 @@ Callout.prototype = {
       textArray.push('" target="_blank" name="callout">')
       textArray.push(this.imageTag())
       textArray.push('</a>')
-      return textArray.join()
+      return textArray.join('')
     },
 
     tableTags: function() {

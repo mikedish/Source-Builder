@@ -1,14 +1,12 @@
-var AddthisCode = function(url, options) {
-    this.init(url, options)
+var AddthisCode = function(url) {
+    this.init(url)
 }
 
 AddthisCode.prototype = {
 
-    init: function (url, options) {
+    init: function (url) {
         this.url = url
         this.url.setMedium('addthis')
-        this.description = options.description
-        this.title = options.title
     },
 
     fullCode: function () {
@@ -19,9 +17,9 @@ AddthisCode.prototype = {
         codeArray.push('",data_ga_social : true,data_track_clickback: true};var addthis_share = { url: "')
         codeArray.push(this.url.base)
         codeArray.push('", title: "')
-        codeArray.push(this.title)
+        codeArray.push(this.url.addthisProperties.title)
         codeArray.push('",description: "')
-        codeArray.push(this.description)
+        codeArray.push(this.url.addthisProperties.description)
         codeArray.push('", templates: {twitter:')
         codeArray.push(this.twitterText())
         codeArray.push('},')
