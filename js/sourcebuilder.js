@@ -1,5 +1,6 @@
 $(document).ready(function() {
     var $form = $('form.validate')
+    $('[name="date"]').datepicker({ format: 'yyyy-mm-dd'})
 
     function output(code) {
       document.getElementById('generated').value = code
@@ -7,7 +8,7 @@ $(document).ready(function() {
 
     function platform() {
       if (document.getElementById('platform').checked) {
-        return 'salse'
+        return 'salsa'
       } else {
         return false
       }
@@ -44,8 +45,8 @@ $(document).ready(function() {
 
         generatedUrl = new Url(inputs)
         
-//      if ($form.valid()) {
-        if (true) {
+        if ($form.valid()) {
+        // if (true) {
             if (inputs.medium !== 'add') {
                 output(generatedUrl.fullUrl())
             } else if (inputs.medium === 'add') {

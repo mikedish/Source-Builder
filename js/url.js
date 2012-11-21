@@ -108,6 +108,7 @@ Url.prototype = {
     },
 
     salsaBlastKey: function() {
+        console.log(this.platform)
         if (this.platform === 'salsa' && this.medium === 'ema') {
             return 'bk[[email_blast_KEY]]' 
         }
