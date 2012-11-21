@@ -1,0 +1,17 @@
+label.error {
+  font-weight: bold;
+  color: red;
+  padding: 2px 8px;
+  margin-top: 2px;
+}
+input.error {
+  border-color: #B94A48;
+  color: #B94A48;
+}
+.navbar a.brand {
+  background-image: url('../img/logo.png');
+  width: 190px;
+  background-repeat: no-repeat;
+  background-position: center;
+  font-size: 0px;
+}
