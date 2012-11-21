@@ -42,10 +42,10 @@ $(document).ready(function() {
           }
         }
 
-        generatedUrl = new Url
-        generatedUrl.init(inputs)
-
-      if ($form.valid()) {
+        generatedUrl = new Url(inputs)
+        
+//      if ($form.valid()) {
+        if (true) {
             if (inputs.medium !== 'add') {
                 output(generatedUrl.fullUrl())
             } else if (inputs.medium === 'add') {

@@ -1,10 +1,11 @@
 var Url = function(options) {
-  this.init('url', options)
+  this.init(options)
 }
 
 Url.prototype = {
 
     init: function(options) {
+        options = this.cleanText(options)
         this.base = options.base
         this.setClient(options.client)
         this.platform = options.platform
@@ -13,6 +14,19 @@ Url.prototype = {
         this.campaign = options.campaign
         this.additional = options.additional
         this.adProperties = options.adProperties
+    },
+
+    cleanText: function(options) {
+        if (typeof(options) == "object") {
+            for (var i in options) {
+                if (options.hasOwnProperty(i)) {
+                    options[i] = this.cleanText(options[i])
+                }
+            }
+        } else if (typeof(options) === 'string') {
+            options = options.replace(' ', '-')
+        }
+        return options
     },
     
     setClient: function(client) {
