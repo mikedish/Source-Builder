@@ -4,13 +4,13 @@ var EmailText = function(options) {
 
 EmailText.prototype = {
     init: function(options) {
-        this.text = options.text
+        this.rawText = options.text
         this.callout = options.callout
     },
 
     removeSpecialChars: function() {
-      var newText =
-        this.text.replace( /\u2018|\u2019|\u201A|\uFFFD/g, "'" )
+      var cleanedText =
+        this.rawText.replace( /\u2018|\u2019|\u201A|\uFFFD/g, "'" )
         .replace( /\u201c|\u201d|\u201e/g, '"')
         .replace( /\u02C6/g, '^' )
         .replace( /\u2039/g, '<' )
@@ -27,22 +27,24 @@ EmailText.prototype = {
         .replace(/[\u02DC|\u00A0]/g, " ")
         .replace(/[ ]+/g, " ")
 
-        this.text = newText
-        return this
+        return cleanedText 
     },
 
     addHTML: function() {
-      this.text = this.text.replace(/\n\n/g, "\n</p><p>\n").replace(/(\w)\n(\w)/g, "$1<br />\n$2")
-      return this
+        return this.removeSpecialChars().replace(/\n\n/g, "\n</p><p>\n").replace(/(\w)\n(\w)/g, "$1<br />\n$2")
     },
 
     calloutHtml: function() {
-      if (this.callout) {
-        return this.callout.tableTags()
-      }
+        if (this.callout) {
+            return this.callout.tableTags()
+        }
     },
 
-    format: function() {
-      return this.calloutHtml() + '<p>' + this.removeSpecialChars().addHTML().text + '</p>'
+    formatHtml: function() {
+        return this.calloutHtml() + '<p>' + this.addHTML() + '</p>'
+    },
+
+    formatText: function() {
+        return this.removeSpecialChars()
     }
 }

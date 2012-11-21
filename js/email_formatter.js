@@ -13,7 +13,8 @@ $(document).ready(function() {
                 text: document.getElementById('text').value,
                 callout: calloutHtml
             })
-            document.getElementById('generated').value = emailHtml.format()
+            document.getElementById('generated-html').value = emailHtml.formatHtml()
+            document.getElementById('generated-text').value = emailHtml.formatText()
         }
     })
 })
