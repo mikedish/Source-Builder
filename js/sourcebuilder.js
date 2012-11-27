@@ -20,6 +20,9 @@ $(document).ready(function() {
     $('[value="add"]').on('change', function(e) {
       $('.collapse.addthis').collapse()
     })
+    $('[value="imp"]').on('change', function(e) {
+      $('#base').removeClass('required')
+    })
 
     $('#generate-url').on('click', function(e) {
         e.preventDefault()
@@ -47,11 +50,13 @@ $(document).ready(function() {
         
         if ($form.valid()) {
 //        if (true) {
-            if (inputs.medium !== 'add') {
-                output(generatedUrl.fullUrl())
-            } else if (inputs.medium === 'add') {
+            if (inputs.medium === 'add') {
                 var generatedAddthisCode = new AddthisCode(generatedUrl)
                 output(generatedAddthisCode.fullCode())
+            } else if (inputs.medium === 'imp') {
+                output(generatedUrl.sourceCode())
+            } else {
+                output(generatedUrl.fullUrl())
             }
         }
     })
