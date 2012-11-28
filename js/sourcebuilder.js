@@ -12,20 +12,27 @@ $(document).ready(function() {
         return false
       }
     }
-
-    $('[value="ad"], [value="add"]').on('change', function(e) {
-        var selector = '.collapse.' + this.value
-        $(selector).collapse('show')
-    })
-    $('[name="medium"]').on('click', function(e) {
-        $('.collapse.in').collapse('hide')
-    })
-    $('[value="imp"]').on('change', function(e) {
-        $('#base').removeClass('required')
-    })
    
+    function collapseShow(element) {
+       var selector = '.collapse.' + element.value
+       $(selector).collapse('show')
+    }
+    function collapseHide(element) {
+       $('.collapse.in').collapse('hide') 
+    }
+    
+    function addEventListenerAll(elements, eventName, eventFunction) {
+        for (i = 0; i < elements.length; i++) {
+            elements[i].addEventListener(eventName, eventFunction.bind(null, elements[i])) 
+        }
+    }
+ 
+    addEventListenerAll(document.querySelectorAll('[value="ad"], [value="add"]'), 'click', collapseShow)
+    addEventListenerAll(document.querySelectorAll('[name="medium"]'), 'click', collapseHide)
+    document.querySelector('[value="imp"]').addEventListener('click', function() { $('#base').removeClass('required') })
+    document.getElementById('generate-url').addEventListener('click', buildSource)
 
-    $('#generate-url').on('click', function(e) {
+    function buildSource(e) {
         e.preventDefault()
         inputs = {
             base: document.getElementById('base').value,
@@ -60,5 +67,5 @@ $(document).ready(function() {
                 output(generatedUrl.fullUrl())
             }
         }
-    })
+    }
 })
