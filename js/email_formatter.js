@@ -1,5 +1,6 @@
 $(document).ready(function() {
-    $('#generate-email').click(function(e) {
+    document.getElementById('generate-email').addEventListener(formatText)
+    function formatText(e) {
         e.preventDefault()
 
         if ($('form.validate').valid()) {
@@ -17,5 +18,5 @@ $(document).ready(function() {
             document.getElementById('generated-html').value = emailHtml.formatHtml()
             document.getElementById('generated-text').value = emailHtml.formatText()
         }
-    })
+    }
 })
