@@ -2,14 +2,14 @@ $(document).ready(function() {
     $('[name="date"]').datepicker({ format: 'yyyy-mm-dd'})
 
     function output(code) {
-      document.getElementById('generated').value = code
+        document.getElementById('generated').value = code
     }
 
     function platform() {
       if (document.getElementById('platform').checked) {
-        return 'salsa'
+          return 'salsa'
       } else {
-        return false
+          return false
       }
     }
    
