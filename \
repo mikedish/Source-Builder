@@ -4,7 +4,7 @@ $(document).ready(function() {
 
     sourceClip.glue('copy-url')
     sourceClip.addEventListener('onMouseDown', function(client, text) {
-         sourceClip.setText(document.getElementById('generated').value)
+         clip.setText(document.getElementById('generated').value)
     })
     sourceClip.addEventListener( 'onComplete', function(client, text) {
         alert("Copied text to clipboard: " + text )
@@ -12,7 +12,8 @@ $(document).ready(function() {
 
     nameClip.glue('copy-email-name')
     nameClip.addEventListener('onMouseDown', function(client, text) {
-      nameClip.setText(document.getElementById('generated-email-name').value)
+        clip.setText('test')
+//      clip.setText(document.getElementById('generated-email-name').value)
     })
     nameClip.addEventListener('onComplete', function(client, text) {
       alert("Copied email name to clipboard")
@@ -23,7 +24,7 @@ $(document).ready(function() {
     function emailName(inputs) {
         var type = inputs.emailProperties.type,
         description = inputs.emailProperties.description,
-        source = generatedUrl.sourceCode().replace('bk[[email_blast_KEY]]', '')
+        source = generatedUrl.sourceCode() 
         return type + ' ' + source + ' ' + description 
     }
         
