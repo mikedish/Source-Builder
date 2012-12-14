@@ -1,4 +1,13 @@
 $(document).ready(function() {
+    var clip = new ZeroClipboard.Client()
+    clip.glue('copy-url')
+    clip.addEventListener('onMouseDown', function(client, text) {
+         clip.setText(document.getElementById('generated').value)
+    })
+    clip.addEventListener( 'onComplete', function(client, text) {
+        alert("Copied text to clipboard: " + text )
+    })
+
     $('[name="date"]').datepicker({ format: 'yyyy-mm-dd'})
 
     function output(code) {
@@ -13,22 +22,23 @@ $(document).ready(function() {
       }
     }
    
-    function collapseShow(element) {
-       var selector = '.collapse.' + element.value
+    function collapseShow(event) {
+       var selector = '.collapse.' + event.target.value
        $(selector).collapse('show')
     }
-    function collapseHide(element) {
-       $('.collapse.in').collapse('hide') 
+    function collapseHide(event) {
+       $('.collapse.in').collapse('hide')
     }
     
-    function addEventListenerAll(elements, eventName, eventFunction) {
-        for (i = 0; i < elements.length; i++) {
-            elements[i].addEventListener(eventName, eventFunction.bind(null, elements[i])) 
-        }
-    }
+    $('.collapse').on('shown', function () {
+        clip.reposition()
+    }) 
+    $('.collapse').on('hidden', function() {
+        clip.reposition()
+    })  
  
-    addEventListenerAll(document.querySelectorAll('[value="ad"], [value="add"]'), 'click', collapseShow)
-    addEventListenerAll(document.querySelectorAll('[name="medium"]'), 'click', collapseHide)
+    document.querySelectorAll('[value="ad"], [value="add"]').addEventListenerAll('click', collapseShow)
+    document.querySelectorAll('[name="medium"]').addEventListenerAll('click', collapseHide)
     document.querySelector('[value="imp"]').addEventListener('click', function() { $('#base').removeClass('required') })
     document.getElementById('generate-url').addEventListener('click', buildSource)
 

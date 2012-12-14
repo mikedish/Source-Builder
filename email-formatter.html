@@ -31,13 +31,15 @@
             <ul class="nav">
               <li><a href="index.html">Home</a></li>
               <li><a href="email-formatter.html">Email Formatter</a></li>
+              <li><a href="social-links.html">Social Links</a></li>
+              <li><a href="https://docs.google.com/a/trilogyinteractive.com/spreadsheet/viewform?formkey=dGhNSmh0eEdLTXdKMTRDS09tOENHTVE6MQ">Issues/Feature Requests</a></li>
             </ul>
           </div>
         </div>
       </div>
     </div>
     <div class="container">
-      <form class="validate">
+      <form class="validate" id="email">
         <div class="row-fluid">
           <fieldset class="span9">
             <legend>Text</legend>
@@ -60,6 +62,8 @@
         </div>
         <div class="form-actions">
           <button id="generate-email" class="btn btn-primary">Generate</button>
+          <button id="copy-html" class="btn btn-success">Copy HTML</button>
+          <button id="copy-text" class="btn btn-success">Copy Text</button>
         </div>
         <div class="row-fluid">
           <legend>Formatted Text</legend>
@@ -85,13 +89,13 @@
     <script src="http://code.jquery.com/jquery.min.js"></script>
     <script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.10.0/jquery.validate.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
-    <script src="js/url.js"></script>
-    <script src="js/addthis_code.js"></script>
+    <script src="js/bootstrap-datepicker.js"></script>
+    <script src="js/jsupport.js"></script>
     <script src="js/clients.js"></script>
-    <script src="js/email_text.js"></script>
+    <script src="js/ZeroClipboard.js"></script>
     <script src="js/callout.js"></script>
+    <script src="js/email_text.js"></script>
     <script src="js/email_formatter.js"></script>
-
   </body>
 </html>
 

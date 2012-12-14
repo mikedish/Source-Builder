@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Source Builder</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Le styles -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/bootstrap-responsive.min.css" rel="stylesheet">
+    <link href="css/sourcebuilder.css" rel="stylesheet">
+
+    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+  </head>
+
+  <body>
+    <div class="navbar">
+      <div class="navbar-inner">
+        <div class="container">
+          <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="brand" href="#">Source Builder</a>
+          <div class="nav-collapse collapse">
+            <ul class="nav">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="email-formatter.html">Email Formatter</a></li>
+              <li><a href="social-links.html">Social Links</a></li>
+              <li><a href="https://docs.google.com/a/trilogyinteractive.com/spreadsheet/viewform?formkey=dGhNSmh0eEdLTXdKMTRDS09tOENHTVE6MQ">Issues/Feature Requests</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="row-fluid">
+        <form class="validate span6" id="facebook">
+          <legend>Facebook</legend>
+          <label for="base">Sourced URL</label>
+          <input name="base" type="url" placeholder="http://baberahamlincoln.com/do-stuff" id="base" class="required url">
+          <label for="title">Title</label>
+          <input name="title" type="text" placeholder="Sign the Petition" id="title" class="required">
+          <label for="image-url">Image URL</label>
+          <input name="image-url" type="url" placeholder="http://example.com/petition-callout.png" id="image-url" class="required url">
+          <label for="description">Description</label>
+          <textarea name="description" placeholder="Why not come fill out our petition? It is so nice." id="description" class="required"></textarea>
+          <div class="form-actions">
+            <button id="generate-facebook" class="btn btn-primary">Generate</button>
+            <input type="text" id="generated-facebook">
+            <button id="copy-facebook" class="btn btn-success">Copy</button>
+          </div>
+        </form>
+        <form class=" span6" id="twitter">
+          <legend>Twitter</legend>
+          <label for="tweet">Tweet</label>
+          <textarea placeholder="Love stuff? Sign our petition: http://example.com" name="tweet" id="tweet" class="required"></textarea>
+          <span class="label" id="tweet-chars-left">140</span>
+          <div class="form-actions">
+            <button id="generate-twitter" class="btn btn-primary">Generate</button>
+            <input type="text" id="generated-twitter">
+            <button id="copy-twitter" class="btn btn-success">Copy</button>
+          </div>
+        </form>
+    </div> <!-- /container -->
+
+    <!-- Le javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="http://code.jquery.com/jquery.min.js"></script>
+    <script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.10.0/jquery.validate.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/bootstrap-datepicker.js"></script>
+    <script src="js/jsupport.js"></script>
+    <script src="js/clients.js"></script>
+    <script src="js/ZeroClipboard.js"></script>
+    <script src="js/social_links.js"></script>
+  </body>
+</html>

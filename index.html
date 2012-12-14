@@ -32,6 +32,8 @@
             <ul class="nav">
               <li><a href="index.html">Home</a></li>
               <li><a href="email-formatter.html">Email Formatter</a></li>
+              <li><a href="social-links.html">Social Links</a></li>
+              <li><a href="https://docs.google.com/a/trilogyinteractive.com/spreadsheet/viewform?formkey=dGhNSmh0eEdLTXdKMTRDS09tOENHTVE6MQ">Issues/Feature Requests</a></li>
             </ul>
           </div>
         </div>
@@ -139,8 +141,12 @@
             </label>
             <label class="radio">
               <input type="radio" name="medium" value="x">
-              External
+              External/Third Party
             </label> 
+            <label class="radio">
+              <input type="radio" name="medium" value="blg">
+              Blog
+            </label>
           </fieldset>
           <fieldset class="span4">
             <legend>Details</legend>
@@ -177,6 +183,7 @@
         <div class="form-actions">
           <button class="btn btn-primary" id="generate-url">Generate</button>
           <input type="text" id="generated" class="span6">
+          <button class="btn btn-success" id="copy-url">Copy</button>
         </div>
       </form>
     </div> <!-- /container -->
@@ -188,11 +195,12 @@
     <script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.10.0/jquery.validate.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/bootstrap-datepicker.js"></script>
+    <script src="js/jsupport.js"></script>
     <script src="js/url.js"></script>
     <script src="js/addthis_code.js"></script>
     <script src="js/clients.js"></script>
+    <script src="js/ZeroClipboard.js"></script>
     <script src="js/sourcebuilder.js"></script>
-
   </body>
 </html>
 
