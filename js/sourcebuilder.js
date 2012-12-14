@@ -10,6 +10,13 @@ $(document).ready(function() {
 
     $('[name="date"]').datepicker({ format: 'yyyy-mm-dd'})
 
+    function emailName(inputs) {
+        var type = inputs.emailProperties.type,
+        description = inputs.emailProperties.description,
+        source = generatedUrl.sourceCode() 
+        return type + ' ' + source + ' ' + description 
+    }
+        
     function output(code) {
         document.getElementById('generated').value = code
     }
@@ -25,9 +32,13 @@ $(document).ready(function() {
     function collapseShow(event) {
        var selector = '.collapse.' + event.target.value
        $(selector).collapse('show')
+       if (event.target.value === 'ema') {
+           $('#email-name').collapse('show')
+       }
     }
     function collapseHide(event) {
        $('.collapse.in').collapse('hide')
+       $('#email-name').collapse('hide')
     }
     
     $('.collapse').on('shown', function () {
@@ -37,7 +48,7 @@ $(document).ready(function() {
         clip.reposition()
     })  
  
-    document.querySelectorAll('[value="ad"], [value="add"]').addEventListenerAll('click', collapseShow)
+    document.querySelectorAll('[value="ad"], [value="add"], [value="ema"]').addEventListenerAll('click', collapseShow)
     document.querySelectorAll('[name="medium"]').addEventListenerAll('click', collapseHide)
     document.querySelector('[value="imp"]').addEventListener('click', function() { $('#base').removeClass('required') })
     document.getElementById('generate-url').addEventListener('click', buildSource)
@@ -61,6 +72,10 @@ $(document).ready(function() {
             addthisProperties: {
                 title: document.getElementById('addthisProperties[title]').value,
                 description: document.getElementById('addthisProperties[description]').value
+            },
+            emailProperties: {
+                type: document.getElementById('emailProperties[type]').value,
+                description: document.getElementById('emailProperties[description]').value
             }
         }  
 
@@ -73,6 +88,9 @@ $(document).ready(function() {
                 output(generatedAddthisCode.fullCode())
             } else if (inputs.medium === 'imp') {
                 output(generatedUrl.sourceCode())
+            } else if (inputs.medium == 'ema') {
+              document.getElementById('generated-email-name').value = emailName(inputs)
+              output(generatedUrl.fullUrl())
             } else {
                 output(generatedUrl.fullUrl())
             }

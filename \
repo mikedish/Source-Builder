@@ -161,9 +161,9 @@
                 <option value="Misc">Misc</option>
                 <option value="Thank You">Thank You</option>
               </select>
-              <label for="emailProperties[description]">Description (optional)</label>
-              <input type="text" name="emailProperties[description]" id="emailProperties[description]">
             </div>
+            <label for="emailProperties[description]">Description (optional)</label>
+            <input type="text" name="emailProperties[description]" id="emailProperties[description]">
             <label for="date">Launch Date</label>
             <input type="text" name="date" id="date" class="required">
             <label for="campaign">Campaign</label>
@@ -197,11 +197,11 @@
           <button class="btn btn-primary" id="generate-url">Generate</button>
           <input type="text" id="generated" class="span6">
           <button class="btn btn-success" id="copy-url">Copy</button>
-          <div class="collapse" id="email-name" style="margin-top:15px;">
-            <input type="text" id="generated-email-name" class="span6">
-            <button class="btn btn-success" id="copy-email-name">Copy Email Name</button>
-          </div>
         </div>
+        <div class="form-actions collapse secondary">
+          <button class="btn btn-primary" id="generate-secondary">Generate</button>
+          <input type="text" id="generated-secondary" class="span6">
+          <button class="btn btn-success" id="copy-secondary">Copy</button>
       </form>
     </div> <!-- /container -->
 
