@@ -43,7 +43,7 @@ Callout.prototype = {
       textArray.push(this.widthInPixels())
       textArray.push('" src="')
       textArray.push(this.url)
-      textArray.push('" style="display: block;" alt="')
+      textArray.push('" style="display: block;float: right;" alt="')
       textArray.push(this.alt)
       textArray.push('" class="image" />')
       return textArray.join('')

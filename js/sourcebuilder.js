@@ -18,13 +18,15 @@ $(document).ready(function() {
       alert("Copied email name to clipboard")
     }) 
 
-    $('[name="date"]').datepicker({ format: 'yyyy-mm-dd'})
+    $('[name="date"]').datepicker({ format: 'yyyy-mm-dd' }).on('changeDate', function(e) {
+        $(this).datepicker('hide')
+    })
 
     function emailName(inputs) {
-        var type = inputs.emailProperties.type,
+        var type = inputs.emailProperties.type.toUpperCase(),
         description = inputs.emailProperties.description,
         source = generatedUrl.sourceCode().replace('bk[[email_blast_KEY]]', '')
-        return type + ' ' + source + ' ' + description 
+        return type + ': ' + source + ' ' + description 
     }
         
     function output(code) {

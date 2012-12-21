@@ -104,6 +104,7 @@ Url.prototype = {
 
     standardSourceCode: function() {
         var array = [this.medium, this.date, this.campaign, this.additional, this.salsaBlastKey()]
+        array = array.filter(function(e){return e})
         return array.join('_')
     },
     
