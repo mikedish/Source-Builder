@@ -21,10 +21,17 @@ $(document).ready(function() {
     $('[name="date"]').datepicker({ format: 'yyyy-mm-dd' }).on('changeDate', function(e) {
         $(this).datepicker('hide')
     })
+    createClientDropdown()
 
+    function createClientDropdown() {
+        for (client in clients) {
+          var dropdown = '<option value="' + client + '">' + clients[client].displayName + '</option>'
+          $('#client').append(dropdown)
+        }
+    }
     function emailName(inputs) {
         var type = inputs.emailProperties.type.toUpperCase(),
-        description = inputs.emailProperties.description,
+        description = inputs.emailProperties.description.toUpperCase(),
         source = generatedUrl.sourceCode().replace('bk[[email_blast_KEY]]', '')
         return type + ': ' + source + ' ' + description 
     }

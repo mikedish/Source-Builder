@@ -1,4 +1,9 @@
 clients = {
+   "PAN":{
+       "displayName":"Pan For Assembly",
+       "googleAnalyticsId":"",
+       "twitter":"PanForAssembly"
+   },
    "CASE":{
       "displayName":"CASE Act",
       "googleAnalyticsId":"UA-27923072-1",
@@ -50,6 +55,7 @@ clients = {
       "twitter":""
    },
    "Letsgooak":{
+      "displayName":"Let's Go Oakland",
       "googleAnalyticsId":"UA-2146120-40",
       "twitter":"letsgooak"
    },
