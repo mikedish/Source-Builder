@@ -32,7 +32,7 @@
               <li><a href="index.html">Home</a></li>
               <li><a href="email-formatter.html">Email Formatter</a></li>
               <li><a href="social-links.html">Social Links</a></li>
-              <li><a href="https://docs.google.com/a/trilogyinteractive.com/spreadsheet/viewform?formkey=dGhNSmh0eEdLTXdKMTRDS09tOENHTVE6MQ">Issues/Feature Requests</a></li>
+              <li><a href="#issues-modal" role="button" data-toggle="modal">Requests</a></li>
             </ul>
           </div>
         </div>
@@ -68,6 +68,25 @@
           </div>
         </form>
     </div> <!-- /container -->
+    <!-- Modal -->
+    <div id="issues-modal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h3 id="myModalLabel">Issues/Requests</h3>
+      </div>
+      <div class="modal-body">
+        <form id="issues">
+          <label for="issue[title]">Title</label>
+          <input type="text" id="issue[title]" name="issue[title]" placeholder="LOUD NOISES">
+          <label for="issue[body]">Body</label>
+          <textarea id="issue[body]" name="issue[body]" placeholder="Can't we just talk?"></textarea>
+          <button class="btn btn-primary" type="submit">Submit</button>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
+      </div>
+    </div>
 
     <!-- Le javascript
     ================================================== -->
@@ -77,6 +96,7 @@
     <script src="js/bootstrap.min.js"></script>
     <script src="js/bootstrap-datepicker.js"></script>
     <script src="js/jsupport.js"></script>
+    <script src="js/github_issues.js"></script>
     <script src="js/clients.js"></script>
     <script src="js/ZeroClipboard.js"></script>
     <script src="js/social_links.js"></script>
