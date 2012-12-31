@@ -4,10 +4,15 @@ clients = {
        "googleAnalyticsId":"",
        "twitter":"PanForAssembly"
    },
-   "CASE":{
-      "displayName":"CASE Act",
-      "googleAnalyticsId":"UA-27923072-1",
-      "twitter":"VoteYesOn35"
+   "Landrieu":{
+      "displayName":"Landrieu",
+      "googleAnalyticsId":"UA-2146120-4",
+      "twitter":"SenLandrieu"
+   },
+   "Harkin":{
+      "displayName":"Harkin",
+      "googleAnalyticsId":"UA-2208089-1",
+      "twitter":"SenatorHarkin"
    },
    "CDP":{
       "displayName":"CA Dem Party",
