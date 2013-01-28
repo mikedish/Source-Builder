@@ -1,4 +1,9 @@
 clients = {
+   "Greuel":{
+       "displayName":"Wendy Greuel",
+       "googleAnalyticsId":"UA-15348446-18",
+       "twitter":"Wendy_Greuel"
+   },
    "PAN":{
        "displayName":"Pan For Assembly",
        "googleAnalyticsId":"",
