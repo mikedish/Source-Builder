@@ -1,8 +1,8 @@
 clients = {
-   "Greuel":{
-       "displayName":"Wendy Greuel",
-       "googleAnalyticsId":"UA-15348446-18",
-       "twitter":"Wendy_Greuel"
+   "Udall":{
+       "displayName":"Mark Udall",
+       "googleAnalyticsId":"UA-2327674-1",
+       "twitter":"MarkUdall2014"
    },
    "PAN":{
        "displayName":"Pan For Assembly",
