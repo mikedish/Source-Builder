@@ -1,4 +1,14 @@
 clients = {
+   "CoC-VRA":{
+       "displayName":"Color of Change - VRA",
+       "googleAnalyticsId":"UA-41272074-1",
+       "twitter":"ColorOfChange"
+   },
+   "CoC":{
+       "displayName":"Color of Change",
+       "googleAnalyticsId":"UA-18073459-4",
+       "twitter":"ColorOfChange"
+   },
    "Udall":{
        "displayName":"Mark Udall",
        "googleAnalyticsId":"UA-2327674-1",
