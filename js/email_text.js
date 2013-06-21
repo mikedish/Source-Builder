@@ -9,8 +9,8 @@ EmailText.prototype = {
     },
 
     removeSpecialChars: function() {
-      var cleanedText =
-        this.rawText.replace( /\u2018|\u2019|\u201A|\uFFFD/g, "'" )
+      return this.rawText
+        .replace( /\u2018|\u2019|\u201A|\uFFFD/g, "'" )
         .replace( /\u201c|\u201d|\u201e/g, '"')
         .replace( /\u02C6/g, '^' )
         .replace( /\u2039/g, '<' )
@@ -26,12 +26,16 @@ EmailText.prototype = {
         .replace( /\u00BE/g, '3/4' )
         .replace(/[\u02DC|\u00A0]/g, " ")
         .replace(/[ ]+/g, " ")
-
-        return cleanedText 
     },
 
     addHTML: function() {
-        return this.removeSpecialChars().replace(/\n\n/g, "\n</p><p>\n").replace(/(\w)\n(\w)/g, "$1<br />\n$2")
+        return '<p>\n' + this.miscFormatting().replace(/\n\s*\n/g, "\n</p><p>\n").replace(/(\w)\n(\w)/g, "$1<br />\n$2") + '\n</p>'
+    },
+
+    miscFormatting: function() {
+      return this.removeSpecialChars().replace(/(\w)--(\w)/g, function(match, firstChar, lastChar) {
+        return firstChar + ' -- ' + lastChar
+      })
     },
 
     calloutHtml: function() {
@@ -41,10 +45,10 @@ EmailText.prototype = {
     },
 
     formatHtml: function() {
-        return this.calloutHtml() + '<p>' + this.addHTML() + '</p>'
+        return this.calloutHtml() + this.addHTML()
     },
 
     formatText: function() {
-        return this.removeSpecialChars()
+        return this.miscFormatting()
     }
 }

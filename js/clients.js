@@ -24,7 +24,7 @@ clients = {
       "googleAnalyticsId":"UA-2146120-4",
       "twitter":"SenLandrieu"
    },
-	"Schatz":{
+   "Schatz":{
        "displayName":"Brian Schatz",
        "googleAnalyticsId":"UA-38436451-1",
        "twitter":"BrianSchatz"

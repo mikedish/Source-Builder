@@ -51,7 +51,7 @@ $(document).ready(function() {
 
     function generateTwitter(form) {
       var encodedUrl = encodeURIComponent(form["tweet"].value),
-      tweetUrl = 'http://www.twitter.com/share?url='
+      tweetUrl = 'http://twitter.com/intent/tweet?text='
       form["generated-twitter"].value = tweetUrl + encodedUrl
     }
 
