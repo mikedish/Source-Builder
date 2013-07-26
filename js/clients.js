@@ -1,4 +1,9 @@
 clients = {
+	"Booker":{
+       "displayName":"Booker",
+       "googleAnalyticsId":"UA-41505612-1",
+       "twitter":"CoryBooker"
+   },
    "CoC-VRA":{
        "displayName":"Color of Change - VRA",
        "googleAnalyticsId":"UA-41272074-1",
