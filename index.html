@@ -110,6 +110,14 @@
               Email TAF
             </label>
             <label class="radio">
+              <input type="radio" name="medium" value="x">
+              External/News Site/Wiki/Blog
+            </label> 
+            <label class="radio">
+              <input type="radio" name="medium" value="tp.">
+              Third Party (include 3rd party name in Additional)
+            </label> 
+            <label class="radio">
               <input type="radio" name="medium" value="lsh">
               Link Shortener
             </label>
@@ -119,19 +127,11 @@
             </label>
             <label class="radio">
               <input type="radio" name="medium" value="art">
-               AutoResponse
+               AutoResponse Trigger
             </label>
             <label class="radio">
               <input type="radio" name="medium" value="qrc">
               QR Code
-            </label>
-            <label class="radio">
-              <input type="radio" name="medium" value="x">
-              External/Third Party
-            </label> 
-            <label class="radio">
-              <input type="radio" name="medium" value="blg">
-              Blog
             </label>
           </fieldset>
           <fieldset class="span4">
@@ -157,14 +157,16 @@
             <div class="collapse ad">
               <label for="adProperties[network]">Network</label>
               <select name="adProperties[network]" id="adProperties[network]">
-                <option value="g">Google</option>
                 <option value="f">Facebook</option>
-                <option value="yb">Yahoo/Bing</option>
+                <option value="g">Google</option>
                 <option value="yt">YouTube</option>
-                <option value="b">BlogAds</option>
+                <option value="yb">Yahoo/Bing</option>
+                <option value="t">Twitter</option>
                 <option value="hu">Hulu</option>
                 <option value="pan">Pandora</option>
-                <option value="t">Twitter</option>
+                <option value="b">BlogAds</option>
+                <option value="d">DailyKos</option>
+                <option value="">Other</option>
               </select>
               <label for="adProperties[geoTargeting]">Geo Targeting</label>
               <input type="text" id="adProperties[geoTargeting]" name="adProperties[geoTargeting]" placeholder="national">
