@@ -9,6 +9,7 @@ Url.prototype = {
         this.base = options.base
         this.setClient(options.client)
         this.platform = options.platform
+        this.receivingPlatform = options.receivingPlatform
         this.setMedium(options.medium)
         this.date = options.date
         this.campaign = options.campaign
@@ -73,12 +74,38 @@ Url.prototype = {
     },
 
     params: function() { 
-        var baseParams = [ 'track','tag','utm_source','source','sc','ms','refcode'],
+        var platformParams,
+            baseParams = ['utm_source'],
             fullParams= []
+
+        switch (this.receivingPlatform) {
+            case 'salsa':
+                platformParams = ['track', 'tag']
+                break
+            case 'bsd':
+                platformParams = ['sc']
+                break
+            case 'actblue':
+                platformParams = ['refcode']
+                break
+            case 'hub':
+                platformParams = ['sc']
+                break
+            case 'ngp':
+                platformParams = ['ms']
+                break
+            case 'convio':
+                platformParams = ['source']
+                break
+            default:
+                platformParams = ['source','sc','ms','refcode']
+        }
+        
+        baseParams = baseParams.concat(platformParams) 
          
-         fullParams.push(this.constructBaseParams(baseParams))
-         fullParams.push(this.googleAnalyticsParams())
-         return fullParams.join('&')
+        fullParams.push(this.constructBaseParams(baseParams))
+        fullParams.push(this.googleAnalyticsParams())
+        return fullParams.join('&')
     },
 
     googleAnalyticsParams: function() {

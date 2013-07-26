@@ -80,6 +80,7 @@ $(document).ready(function() {
             base: document.getElementById('base').value,
             client: $('#client').val(),
             platform: platform(),
+            receivingPlatform: document.getElementById('receiving-platform').value,
             medium: $('input[name=medium]:checked').val(), 
             date: document.getElementById('date').value,
             campaign: document.getElementById('campaign').value,
