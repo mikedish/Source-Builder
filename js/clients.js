@@ -4,10 +4,10 @@ clients = {
        "googleAnalyticsId":"UA-41505612-1",
        "twitter":"CoryBooker"
    },
-   "CoC-VRA":{
-       "displayName":"Color of Change - VRA",
-       "googleAnalyticsId":"UA-41272074-1",
-       "twitter":"ColorOfChange"
+   "Walsh":{
+       "displayName":"Walsh",
+       "googleAnalyticsId":"UA-44491222-1",
+       "twitter":"WalshForMontana"
    },
    "CoC":{
        "displayName":"Color of Change",
