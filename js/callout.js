@@ -43,9 +43,9 @@ Callout.prototype = {
       textArray.push(this.widthInPixels())
       textArray.push('" src="')
       textArray.push(this.url)
-      textArray.push('" style="display: block;float: right;" alt="')
+      textArray.push('" alt="')
       textArray.push(this.alt)
-      textArray.push('" class="image" />')
+      textArray.push('" class="callout" />')
       return textArray.join('')
     },
 
@@ -53,7 +53,7 @@ Callout.prototype = {
       var textArray = []
       textArray.push('<a href="')
       textArray.push(this.link)
-      textArray.push('" target="_blank" name="callout">')
+      textArray.push('" target="_blank" name="link" class="callout">')
       textArray.push(this.imageTag())
       textArray.push('</a>')
       return textArray.join('')
@@ -62,7 +62,7 @@ Callout.prototype = {
     tableTags: function() {
         if (this.validateOptions()) {
             var textArray = []
-            textArray.push('<table cellspacing="0" cellpadding="0" align="right"><tbody><tr><td align="right" style="padding: 0pt 0pt 10px 10px;">')
+            textArray.push('<table align="right" style="width: auto; padding: 0px 0px 10px 10px" class="callout"><tbody><tr><td>')
             textArray.push(this.linkTag())
             textArray.push('</td></tr></tbody></table>\n')
             return textArray.join('')
