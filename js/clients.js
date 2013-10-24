@@ -24,10 +24,15 @@ clients = {
        "googleAnalyticsId":"",
        "twitter":"PanForAssembly"
    },
-   "Landrieu":{
-      "displayName":"Landrieu",
-      "googleAnalyticsId":"UA-2146120-4",
+   "Landrieu, Mary":{
+      "displayName":"Mary Landrieu",
+      "googleAnalyticsId":"UA-39113136-2",
       "twitter":"SenLandrieu"
+   },
+	"Landrieu, Mitch":{
+      "displayName":"Mitch Landrieu",
+      "googleAnalyticsId":"UA-11960877-4",
+      "twitter":"MitchLandrieu"
    },
    "Schatz":{
        "displayName":"Brian Schatz",
