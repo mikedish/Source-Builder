@@ -4,6 +4,11 @@ clients = {
        "googleAnalyticsId":"UA-41505612-1",
        "twitter":"CoryBooker"
    },
+      "NLIRH":{
+       "displayName":"NLIRH",
+       "googleAnalyticsId":"UA-45636444-1",
+       "twitter":"NuestroTexas"
+   },
    "Walsh":{
        "displayName":"Walsh",
        "googleAnalyticsId":"UA-44491222-1",
