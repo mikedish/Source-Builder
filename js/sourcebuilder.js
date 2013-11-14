@@ -54,6 +54,8 @@ $(document).ready(function() {
        if (event.target.value === 'ema') {
            $('#email-name').collapse('show')
        }
+     //  if ($('input[name="medium"]:checked').val() === 'web') {$('input#date').hide().removeClass('required');}
+      // else {$('input#date').show().addClass('required');}
     }
     function collapseHide(event) {
        $('.collapse.in').collapse('hide')
@@ -69,7 +71,7 @@ $(document).ready(function() {
         sourceClip.reposition()
     })  
  
-    document.querySelectorAll('[value="ad"], [value="add"], [value="ema"]').addEventListenerAll('click', collapseShow)
+    document.querySelectorAll('[value="ad"], [value="add"], [value="ema"], [value="web"]').addEventListenerAll('click', collapseShow)
     document.querySelectorAll('[name="medium"]').addEventListenerAll('click', collapseHide)
     document.querySelector('[value="imp"]').addEventListener('click', function() { $('#base').removeClass('required') })
     document.getElementById('generate-url').addEventListener('click', buildSource)

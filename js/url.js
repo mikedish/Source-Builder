@@ -130,7 +130,9 @@ Url.prototype = {
     },
 
     standardSourceCode: function() {
+    
         var array = [this.medium, this.date, this.campaign, this.additional, this.salsaBlastKey()]
+        if (this.medium === 'web') {delete array[1]}
         array = array.filter(function(e){return e})
         return array.join('_')
     },
