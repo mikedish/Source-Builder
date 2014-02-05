@@ -83,7 +83,7 @@ Url.prototype = {
                 platformParams = ['track', 'tag']
                 break
             case 'bsd':
-                platformParams = ['sc']
+                platformParams = ['source']
                 break
             case 'actblue':
                 platformParams = ['refcode']
@@ -95,7 +95,7 @@ Url.prototype = {
                 platformParams = ['ms']
                 break
             case 'convio':
-                platformParams = ['source']
+                platformParams = ['s_src']
                 break
             default:
                 platformParams = ['source','sc','ms','refcode']
