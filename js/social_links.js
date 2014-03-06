@@ -69,14 +69,16 @@ $(document).ready(function() {
     }
 
      function generateFacebookUrl(form) {
-        var fbBase = 'http://www.facebook.com/sharer.php?s=100&p[title]=',
-        title = encodeURIComponent(form["title"].value),
-        urlJoin = '&p[url]=',
+     //   var fbBase = 'http://www.facebook.com/sharer.php?s=100&p[title]=',
+     	var fbBase = 'https://www.facebook.com/sharer/sharer.php?u=',
+     //   title = encodeURIComponent(form["title"].value),
+     //   urlJoin = '&p[url]=',
         encodedUrl = encodeURIComponent(form["base"].value),
-        imageJoin = '&p[images][0]=',
-        encodedImageUrl = encodeURIComponent(form["image-url"].value),
-        descriptionJoin = '&p[summary]=',
-        description = encodeURIComponent(form["description"].value)
-        form["generated-facebook"].value = fbBase + title + urlJoin + encodedUrl + imageJoin + encodedImageUrl + descriptionJoin + description
+     //   imageJoin = '&p[images][0]=',
+     //   encodedImageUrl = encodeURIComponent(form["image-url"].value),
+     //   descriptionJoin = '&p[summary]=',
+     //   description = encodeURIComponent(form["description"].value)
+      //  form["generated-facebook"].value = fbBase + title + urlJoin + encodedUrl + imageJoin + encodedImageUrl + descriptionJoin + description
+      form["generated-facebook"].value = fbBase + encodedUrl
      }
 })
