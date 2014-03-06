@@ -73,7 +73,7 @@ $(document).ready(function() {
      	var fbBase = 'https://www.facebook.com/sharer/sharer.php?u=',
      //   title = encodeURIComponent(form["title"].value),
      //   urlJoin = '&p[url]=',
-        encodedUrl = encodeURIComponent(form["base"].value),
+        encodedUrl = encodeURIComponent(form["base"].value)
      //   imageJoin = '&p[images][0]=',
      //   encodedImageUrl = encodeURIComponent(form["image-url"].value),
      //   descriptionJoin = '&p[summary]=',
