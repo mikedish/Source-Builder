@@ -1,8 +1,8 @@
 clients = {
-	"Booker":{
-       "displayName":"Booker",
-       "googleAnalyticsId":"UA-41505612-1",
-       "twitter":"CoryBooker"
+	"CWA":{
+       "displayName":"CWA",
+       "googleAnalyticsId":"UA-278151-5",
+       "twitter":"CWAUnion"
    },
       "NLIRH":{
        "displayName":"NLIRH",
